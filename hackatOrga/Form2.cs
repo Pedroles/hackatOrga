@@ -29,7 +29,7 @@ namespace hackatOrga
 
 
                 var formatUS = new CultureInfo("en-US");
-                pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
                 Evenement unEvent = new Evenement();
                 unEvent.LibelleE = tbx_libelle.Text;
                 unEvent.DateE = DateTime.ParseExact(tbx_date.Text, "d", formatUS);
@@ -130,7 +130,7 @@ namespace hackatOrga
 
             private void Form2_Load(object sender, EventArgs e)
             {
-                pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
                 cbx_idH.DataSource = cnx.Hackathons.OrderBy(ev => ev.IdH).ToList();
                 cbx_idH.DisplayMember = "theme";
                 cbx_idH.ValueMember = "IdH";

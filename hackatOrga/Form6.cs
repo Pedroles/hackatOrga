@@ -25,7 +25,7 @@ namespace hackatOrga
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             cbx_hackat.DataSource = cnx.Hackathons.OrderBy(ev => ev.IdH).ToList();
             cbx_hackat.DisplayMember = "theme";
             cbx_hackat.ValueMember = "IdH";
@@ -71,7 +71,7 @@ namespace hackatOrga
 
         private void cbx_hackat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             Hackathon unHackat = (Hackathon)cbx_hackat.SelectedItem;
             cbx_events.DataSource = cnx.Evenements.OrderBy(ev => ev.IdEvent).Where(ev => ev.Type == "conference").Where(ev => ev.IdHackat == unHackat.IdH).ToList();
             cbx_events.DisplayMember = "libelleE";

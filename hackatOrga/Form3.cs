@@ -27,7 +27,7 @@ namespace hackatOrga
         private void btn_CreerHackat_Click(object sender, EventArgs e)
         {
             var formatUS = new CultureInfo("en-US");
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             Hackathon unHackat = new Hackathon();
             unHackat.DateDebut = DateTime.ParseExact(tbx_dateDebut.Text, "d", formatUS);
             unHackat.HeureDebut = TimeSpan.ParseExact(tbx_heureDebut.Text, "T", formatUS);

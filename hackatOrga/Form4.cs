@@ -24,7 +24,7 @@ namespace hackatOrga
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             //iTextSharp.LGPLv2.Core
             //Création d'un document
             Document unDocument = new Document();
@@ -96,7 +96,7 @@ namespace hackatOrga
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             cbx_idH.DataSource = cnx.Hackathons.OrderBy(ev => ev.IdH).ToList();
             cbx_idH.DisplayMember = "theme";
             cbx_idH.ValueMember = "IdH";

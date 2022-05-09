@@ -24,7 +24,7 @@ namespace hackatOrga
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
         }
 
         private void btnCrea_Click(object sender, EventArgs e)

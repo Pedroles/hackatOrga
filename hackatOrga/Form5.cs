@@ -31,7 +31,7 @@ namespace hackatOrga
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             cbx_coms.DataSource = cnx.Hackathons.OrderBy(ev => ev.IdH).ToList();
             cbx_coms.DisplayMember = "theme";
             cbx_coms.ValueMember = "IdH";
@@ -39,7 +39,7 @@ namespace hackatOrga
 
        private void cbx_coms_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             Hackathon unHackat = (Hackathon)cbx_coms.SelectedItem;
             cbx_events.DataSource = cnx.Evenements.OrderBy(ev => ev.IdEvent).Where(ev => ev.Type == "initiation").Where(ev => ev.IdHackat == unHackat.IdH).ToList();
             cbx_events.DisplayMember = "libelleE";
@@ -93,7 +93,7 @@ namespace hackatOrga
 
         private void cbx_events_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pbaudoin_hackatonContext cnx = new pbaudoin_hackatonContext();
+            bdpbaudoin6Context cnx = new bdpbaudoin6Context();
             Hackathon unHackat = (Hackathon)cbx_coms.SelectedItem;
             Evenement unEvent = (Evenement)cbx_events.SelectedItem;
             lbl_lieu.Text = unHackat.Rue + " " + unHackat.CodePostal + " " + unHackat.Ville;
