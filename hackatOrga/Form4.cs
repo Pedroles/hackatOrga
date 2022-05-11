@@ -28,7 +28,7 @@ namespace hackatOrga
             //iTextSharp.LGPLv2.Core
             //Création d'un document
             Document unDocument = new Document();
-            PdfWriter.GetInstance(unDocument, new FileStream("C:\\Users\\pbaudoin\\Documents\\participants.pdf", FileMode.Create));
+            PdfWriter.GetInstance(unDocument, new FileStream("D:\\/participants.pdf", FileMode.Create));
             unDocument.Open();
 
             //Paragraphe centré avec une police de 14 et du gras

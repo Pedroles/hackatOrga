@@ -102,6 +102,7 @@ namespace hackatOrga
             this.btn_intervenant.TabIndex = 9;
             this.btn_intervenant.Text = "Envoyer un mail à l\'intervenant";
             this.btn_intervenant.UseVisualStyleBackColor = true;
+            this.btn_intervenant.Click += new System.EventHandler(this.btn_intervenant_Click);
             // 
             // label4
             // 
