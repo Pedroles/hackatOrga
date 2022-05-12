@@ -80,6 +80,7 @@ namespace hackatOrga
             Evenement unEvent = (Evenement)cbx_events.SelectedItem;
             if (unEvent is null)
             {
+                lbl_theme.Text = "______";
                 lbl_lieu.Text = "______";
                 lbl_date.Text = "______";
                 lbl_heure.Text = "______";
@@ -92,6 +93,8 @@ namespace hackatOrga
                 lbl_date.Text = unEvent.DateE.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture); //Affichage de la date au format jj/mm/aaaa
                 lbl_heure.Text = unEvent.HeureE.ToString();
                 lbl_salle.Text = unEvent.SalleE.ToString();
+                lbl_theme.Text = unEvent.ThemeE.ToString();
+                lbl_placeholder.Text = "";
             }
             
         }
